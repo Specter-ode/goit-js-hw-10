@@ -11,6 +11,8 @@ countryListEl.style.listStyle = "none";
 countryListEl.style.margin = "0";
 const countryInfoEl = document.querySelector('.country-info')
 const searchInputEl = document.querySelector('#search-box')
+document.getElementById('search-box').placeholder = 'Search country';
+
 
 const onSearchInput = e => {
     e.preventDefault();
