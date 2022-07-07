@@ -6,7 +6,6 @@ import createCountryList from './templates/country-list.hbs'
 import createCountryCard from './templates/country-card.hbs'
 
 const DEBOUNCE_DELAY = 500;
-
 const countryListEl = document.querySelector('.country-list')
 countryListEl.style.listStyle = "none";
 countryListEl.style.margin = "0";
@@ -22,7 +21,6 @@ const onSearchInput = e => {
     fetchCountryByName(searchValue)
     .then(data => {
         clearFields ()
-        console.log(data)
         if (data.length > 10) {
             Notify.info('Too many matches found. Please enter a more specific name.')
         } else if (data.length === 1) {
